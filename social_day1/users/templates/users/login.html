@@ -1,0 +1,39 @@
+{% extends "accounts/layout.html" %} 
+{% load crispy_forms_tags  %}
+{% load static %}
+<!--
+{% block background %}
+	<img src="{% static 'login_background.jpg' %}">
+{% endblock background %} !-->
+{% block login %}
+	<div class="row">
+		<div class="col-md-1">
+			<br>
+			<br>
+			<img src="{% static 'login_back.jpg' %}" class="login_back">
+		</div>
+		<div class="col-md-11">
+		 	<div class="login-section">
+				<form method = "POST">
+					{% csrf_token %}
+					<fieldset class = "form-group">
+						<legend class = "border-buttom mb-4">Log In</legend>
+						{{ form|crispy }}
+					</fieldset>
+					<div class="form-group">
+						<button class="btn btn-outline-info" type="submit">Login</button>
+					</div>
+				</form>
+				<div class="border-top pt-3">
+					<small class="text-muted">
+						Need An Account? <a class="ml-2" href = "{% url 'register' %}">Sign Up</a>
+					</small>
+					<img src="{% static 'login_section_back.png' %}" class="login_back">
+				 	<h6 class="login_buttom_text">See what’s happening in the world right now</h6>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock login %}
+
+
