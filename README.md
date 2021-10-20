@@ -14,5 +14,5 @@ This application allows user to:
 This Social media web application is more like Twitter and it uses mysql database as backend.
 
 DEMO:
-![Watch the Demo Here](https://youtu.be/-xGxYOhjaOs)
+Watch Demo Here: https://youtu.be/-xGxYOhjaOs
 
